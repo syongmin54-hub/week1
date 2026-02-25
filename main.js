@@ -8,7 +8,7 @@ themeBtn.addEventListener('click', () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     
     document.documentElement.setAttribute('data-theme', newTheme);
-    themeBtn.textContent = newTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    themeBtn.textContent = newTheme === 'dark' ? '라이트 모드' : '다크 모드';
     
     // Save preference
     localStorage.setItem('theme', newTheme);
@@ -18,7 +18,9 @@ themeBtn.addEventListener('click', () => {
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
-    themeBtn.textContent = savedTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    themeBtn.textContent = savedTheme === 'dark' ? '라이트 모드' : '다크 모드';
+} else {
+    themeBtn.textContent = '다크 모드';
 }
 
 function generateLottoNumbers() {
