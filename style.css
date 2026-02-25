@@ -23,10 +23,12 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
+    flex-direction: column; /* 세로 정렬을 위해 추가 */
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* height를 min-height로 변경 */
     margin: 0;
+    padding: 20px 0; /* 상하 여백 추가 */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -37,7 +39,14 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 20px var(--shadow-color);
     transition: background-color 0.3s, box-shadow 0.3s;
+    width: 90%; /* 너비 조정 */
+    max-width: 500px; /* 최대 너비 설정 */
 }
+
+.contact-container {
+    margin-top: 30px; /* 위쪽 여백 추가 */
+}
+
 
 .theme-toggle {
     text-align: right;
@@ -60,7 +69,7 @@ body {
     color: var(--container-bg);
 }
 
-h1 {
+h1, h2 {
     color: var(--text-color);
     margin-bottom: 30px;
 }
@@ -85,7 +94,7 @@ h1 {
     transition: all 0.3s ease;
 }
 
-#generate-btn {
+#generate-btn, .contact-container button {
     background-color: var(--btn-bg);
     color: white;
     padding: 15px 30px;
@@ -95,8 +104,29 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px var(--shadow-color);
+    width: 100%;
 }
 
-#generate-btn:hover {
+#generate-btn:hover, .contact-container button:hover {
     background-color: var(--btn-hover);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
