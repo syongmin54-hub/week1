@@ -173,3 +173,29 @@ h2 {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+.site-footer {
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.site-footer .container {
+    background: none;
+    box-shadow: none;
+    border-top: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 20px 0;
+    color: var(--subtitle-color);
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
